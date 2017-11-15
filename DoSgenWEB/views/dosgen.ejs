@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DoSgen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-select.min.css">
+    <link rel="stylesheet" href="/stylesheets/selectric.css">
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/masonry.pkgd.js"></script>
+    <script src="/javascripts/client.js"></script>
+    <script src="/javascripts/jquery.selectric.min.js"></script>
+    <script src="/javascripts/bootstrap-select.min.js"></script>
+    <script src="/javascripts/socket.io-1.3.2.js"></script>
+    <script src="/javascripts/bootbox.min.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top" id="navbar">
+    <div class="container-fluid">
+        <img src="/images/dosgen_logo.png" id="logo">
+        <div id="addAttackBtn">
+            <select class="selectpicker" title="Add your attack" id="attackSelectBox">
+            </select>
+            <a class="signout" title="Sign out" href=#><span class="glyphicon glyphicon-log-out"></span></a>
+        </div>
+    </div>
+    <div id="underNavbar">
+    </div>
+</nav>
+<form role="form" id="fireForm">
+    <div id="container">
+        <div id="generalSettingsWindow" class="item">
+            <div class="attack-title">Common Settings</div>
+            <div class="form-group">
+                <label for="gen:i">Outgoing interface: <span style="color:red; font-size: 18px">*</span></label>
+                <input type="text" class="form-control" name="gen:i" placeholder="E.g. eth0" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Attacking time [s]: </label>
+                <input type="text" class="form-control" name="time" placeholder="Empty means infinite" id="time">
+            </div>
+            <div class="form-group">
+                <label for="gen:P">Number of processes:</label>
+                <input type="text" class="form-control" name="gen:P" placeholder="Empty means maximum">
+            </div>
+            <div id="mandatory"><span id="asterisk">*</span>Mandatory fields</div>
+        </div>
+    </div>
+    <div class="runAndStopButton">
+        <button type="submit" class="btn btn-primary" id="runButton">Run!</button>
+    </div>
+</form>
+<form role="form" id="killForm">
+    <div class="runAndStopButton">
+        <button type="submit" class="btn btn-danger" id="stopButton">Stop!</button>
+    </div>
+</form>
+<div id="outputlabel">
+    <label for="output">Output:</label>
+</div>
+<textarea readonly class="form-control" rows="50" id="output"></textarea>
+</body>
+</html>

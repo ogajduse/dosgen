@@ -1,0 +1,165 @@
+html, body {
+    padding: 0;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+a {
+    color: white;
+}
+
+.signout:hover {
+    color: red;
+    text-shadow: red 0 0 2px
+}
+
+#logo {
+    padding: 5px;
+    padding-top: 15px;
+    width: 300px;
+}
+
+#navbar {
+    background: linear-gradient(#595085, #191626);
+    height: auto;
+    border: none;
+}
+
+#underNavbar {
+    border-top: 1px solid;
+    border-top-color: #191626;
+    border-bottom: 1px solid;
+    height: 6px;
+    background: linear-gradient(#191626, #595085);
+}
+
+#container {
+    padding: 5px;
+}
+
+#mandatory {
+    float: left;
+    margin-bottom: 4px;
+    font-size: 13px;
+    font-style: italic;
+}
+
+#asterisk {
+    color: red;
+    font-size: 18px;
+    font-weight: bold
+}
+
+.item {
+    padding: 15px 5px 0 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: #989898;
+    float: left;
+    margin: 10px;
+    box-shadow: 1px 1px 1px #888888;
+    background: linear-gradient(#fff, #f3f0ff);
+}
+
+#generalSettingsWindow {
+    background: linear-gradient(#f8f8ff, #d6d9ff);
+}
+
+.form-control {
+    height: 30px;
+    line-height: 30px;
+    margin-inside: 50px;
+    margin-bottom: 10px;
+
+}
+
+#addAttackBtn {
+    margin-top: 0px;
+    margin-right: 10px;
+    margin-left: 2px;
+    margin-bottom: 0px;
+    float: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#removeAttackBtn {
+    float: left;
+    color: #FF0000;
+    font-size: 16px;
+    margin: -21px 0px 0 -10px;
+    background: #fff;
+    border-radius: 150px;
+}
+
+#removeAttackBtn:hover {
+    cursor: pointer;
+}
+
+.attack-title {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    float: right;
+    color: #408080;
+    background: linear-gradient(#edf3f5, #fff);
+    margin: -27px 5px 0 50px;
+    font-size: 17px;
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.runAndStopButton {
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#outputlabel {
+    margin-top: 70px;
+    margin-left: 10px;
+}
+
+#output {
+    font: 14px "Courier New", Courier, monospace;
+    width: 98.4%;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    float: none;
+    height: 45%;
+    padding: 5px;
+    line-height: 1;
+}
+
+.btn-select {
+    color: #fff;
+}
+
+.btn-select, .btn-select.active, .btn-select:active, .btn-select[disabled], fieldset[disabled]
+.btn-select {
+    background-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
+.btn-select, .btn-select:active, .btn-select:focus,
+.btn-select:hover {
+    border-color: transparent
+}
+
+.btn-select:focus, .btn-select:hover {
+    color: white;
+    text-shadow: white 0 0 2px;
+    background-color: transparent
+}
+
+.btn-select[disabled]:focus, .btn-select[disabled]:hover, fieldset[disabled]
+.btn-select:focus, fieldset[disabled] .btn-select:hover {
+    color: #777;
+}
+
+.btn-select {
+    height: 50px;
+}

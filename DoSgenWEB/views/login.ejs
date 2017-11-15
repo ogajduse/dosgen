@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to DoSgen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/login_style.css'/>
+</head>
+<body>
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <img class="profile-img"
+                     src="/images/login_logo.png">
+                <div class="panel-heading" id="welcome">
+                    <strong> Welcome to DoSgen!</strong>
+                </div>
+                <div class="panel-heading" id="signin">
+                    <p>Sign in to continue</p>
+                </div>
+                <div class="panel-body">
+                    <form role="form" action="/auth/login/" method="POST">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                                    <div class="form-group">
+                                        <div class="input-group">
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-user"></i>
+												</span>
+                                            <input class="form-control" placeholder="Username" name="username"
+                                                   type="text" autofocus>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+												<span class="input-group-addon">
+													<i class="glyphicon glyphicon-lock"></i>
+												</span>
+                                            <input class="form-control" placeholder="Password" name="password"
+                                                   type="password" value="">
+                                        </div>
+                                    </div>
+                                    <% if (failedLogin) { %>
+                                    <div class="alert alert-danger">
+                                        <img src="/images/warning.png" width="25px" style="margin-right:3px;">
+                                        <strong>Username</strong> or <strong>password</strong> wrong!
+                                    </div>
+                                    <% } %>
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in">
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
