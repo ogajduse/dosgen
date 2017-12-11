@@ -202,5 +202,30 @@ string trafgen_http_cfg = "{"
 			//"drnd(64), "
 			"}";
 
+string trafgen_ntp_cfg =
+		"{0x52,0x54,0x00,0xf9,0xca,0x25, " /* Dst Mac */
+				"0x52,0x54,0x00,0x6c,0x9e,0x15, " /* Src Mac */
+				"c16(0x0800), "/* EtherType */
+				"0b01000101, 0, "/* IPv4 Version, IHL, TOS */
+				"c16(36), "/* IPv4 Total Len */
+				"drnd(2), "/* IPv4 Ident */
+				"0b01000000, 0, "/* IPv4 Flags, Frag Off */
+				"64, "/* IPv4 TTL */
+				"17, "/* Proto UDP */
+				"csumip(14, 33), "/* IPv4 Checksum (IP header from, to) */
+				"192,168,124,129 "/* Source IP */
+				"192,168,124,14 "/* Dest IP */
+				"c16(1123), "/* UDP Source Port */
+				"c16(123), "/* UDP Dest Port */
+				"c16(16), "/* Length */
+				"c16(00), "/* Checksum */
+				/* NTP */
+				"0b00010111, "/* Flags - NTPv2, Private mode */
+				"0, "/* Auth, sequence - None */
+				"3, "/* Implementation - XNTPD */
+				"42, "/* Request code - MON_GETLIST_1 */
+				"c32(0), "/* 4 bytes of padding */
+				"}";
+
 #endif
 
