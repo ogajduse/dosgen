@@ -1,8 +1,8 @@
-/* A Bison parser, made by GNU Bison 3.0.2.  */
+/* A Bison parser, made by GNU Bison 3.0.4.  */
 
 /* Bison implementation for Yacc-like parsers in C
 
-   Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
+   Copyright (C) 1984, 1989-1990, 2000-2015 Free Software Foundation, Inc.
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -44,7 +44,7 @@
 #define YYBISON 1
 
 /* Bison version.  */
-#define YYBISON_VERSION "3.0.2"
+#define YYBISON_VERSION "3.0.4"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -510,7 +510,7 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-typedef union YYSTYPE YYSTYPE;
+
 union YYSTYPE
 {
 #line 343 "trafgen_parser.y" /* yacc.c:355  */
@@ -522,6 +522,8 @@ union YYSTYPE
 
 #line 524 "trafgen/trafgen_parser.tab.c" /* yacc.c:355  */
 };
+
+typedef union YYSTYPE YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
 #endif
@@ -535,7 +537,7 @@ int yyparse (void);
 
 /* Copy the second part of user declarations.  */
 
-#line 539 "trafgen/trafgen_parser.tab.c" /* yacc.c:358  */
+#line 541 "trafgen/trafgen_parser.tab.c" /* yacc.c:358  */
 
 #ifdef short
 # undef short
@@ -1926,85 +1928,85 @@ yyreduce:
         case 2:
 #line 380 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1930 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1932 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 3:
 #line 381 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1936 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1938 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 4:
 #line 382 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1942 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1944 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 5:
 #line 383 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1948 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1950 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 6:
 #line 387 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1954 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1956 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 7:
 #line 391 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1960 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1962 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 8:
 #line 392 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1966 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1968 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 9:
 #line 396 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1972 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1974 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 10:
 #line 397 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1978 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1980 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 11:
 #line 401 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1984 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1986 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 12:
 #line 402 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1990 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1992 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 13:
 #line 403 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 1996 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 1998 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 14:
 #line 407 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2002 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2004 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 15:
 #line 408 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2008 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2010 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 16:
@@ -2016,7 +2018,7 @@ yyreduce:
 
 			realloc_packet();
 		}
-#line 2020 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2022 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 17:
@@ -2036,7 +2038,7 @@ yyreduce:
 
 			realloc_packet();
 		}
-#line 2040 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2042 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 18:
@@ -2048,205 +2050,205 @@ yyreduce:
 
 			realloc_packet();
 		}
-#line 2052 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2054 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 19:
 #line 443 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2058 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2060 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 20:
 #line 444 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2064 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2066 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 21:
 #line 448 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2070 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2072 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 22:
 #line 449 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2076 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2078 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 23:
 #line 453 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2082 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2084 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 24:
 #line 457 "trafgen_parser.y" /* yacc.c:1646  */
     { set_byte((uint8_t) (yyvsp[0].number)); }
-#line 2088 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2090 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 25:
 #line 458 "trafgen_parser.y" /* yacc.c:1646  */
     { set_multi_byte((uint8_t *) (yyvsp[0].str) + 1, strlen((yyvsp[0].str)) - 2); }
-#line 2094 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2096 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 26:
 #line 459 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2100 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2102 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 27:
 #line 460 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2106 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2108 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 28:
 #line 461 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2112 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2114 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 29:
 #line 462 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2118 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2120 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 30:
 #line 463 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2124 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2126 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 31:
 #line 464 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2130 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2132 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 32:
 #line 465 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2136 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2138 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 33:
 #line 466 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2142 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2144 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 34:
 #line 467 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2148 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2150 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 35:
 #line 468 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_header_finish(hdr); }
-#line 2154 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2156 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 36:
 #line 469 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2160 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2162 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 37:
 #line 474 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[0].number); }
-#line 2166 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2168 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 38:
 #line 476 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-2].number) + (yyvsp[0].number); }
-#line 2172 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2174 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 39:
 #line 478 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-2].number) - (yyvsp[0].number); }
-#line 2178 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2180 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 40:
 #line 480 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-2].number) * (yyvsp[0].number); }
-#line 2184 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2186 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 41:
 #line 482 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-2].number) / (yyvsp[0].number); }
-#line 2190 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2192 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 42:
 #line 484 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-2].number) % (yyvsp[0].number); }
-#line 2196 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2198 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 43:
 #line 486 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-2].number) & (yyvsp[0].number); }
-#line 2202 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2204 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 44:
 #line 488 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-2].number) | (yyvsp[0].number); }
-#line 2208 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2210 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 45:
 #line 490 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-2].number) ^ (yyvsp[0].number); }
-#line 2214 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2216 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 46:
 #line 492 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-3].number) << (yyvsp[0].number); }
-#line 2220 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2222 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 47:
 #line 494 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-3].number) >> (yyvsp[0].number); }
-#line 2226 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2228 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 48:
 #line 496 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = -1 * (yyvsp[0].number); }
-#line 2232 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2234 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 49:
 #line 498 "trafgen_parser.y" /* yacc.c:1646  */
     { (yyval.number) = (yyvsp[-1].number);}
-#line 2238 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2240 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 50:
 #line 503 "trafgen_parser.y" /* yacc.c:1646  */
     { set_fill((yyvsp[-3].number), (yyvsp[-1].number)); }
-#line 2244 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2246 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 51:
 #line 508 "trafgen_parser.y" /* yacc.c:1646  */
     { set_byte((uint8_t) (yyvsp[-1].number)); }
-#line 2250 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2252 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 52:
@@ -2256,7 +2258,7 @@ yyreduce:
 
 			set_multi_byte((uint8_t *) &__c, sizeof(__c));
 		}
-#line 2260 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2262 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 53:
@@ -2266,7 +2268,7 @@ yyreduce:
 
 			set_multi_byte((uint8_t *) &__c, sizeof(__c));
 		}
-#line 2270 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2272 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 54:
@@ -2276,73 +2278,73 @@ yyreduce:
 
 			set_multi_byte((uint8_t *) &__c, sizeof(__c));
 		}
-#line 2280 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2282 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 55:
 #line 528 "trafgen_parser.y" /* yacc.c:1646  */
     { set_rnd((yyvsp[-1].number)); }
-#line 2286 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2288 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 56:
 #line 533 "trafgen_parser.y" /* yacc.c:1646  */
     { set_csum16((yyvsp[-3].number), (yyvsp[-1].number), CSUM_IP); }
-#line 2292 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2294 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 57:
 #line 535 "trafgen_parser.y" /* yacc.c:1646  */
     { set_csum16((yyvsp[-3].number), (yyvsp[-1].number), CSUM_TCP); }
-#line 2298 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2300 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 58:
 #line 537 "trafgen_parser.y" /* yacc.c:1646  */
     { set_csum16((yyvsp[-3].number), (yyvsp[-1].number), CSUM_UDP); }
-#line 2304 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2306 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 59:
 #line 539 "trafgen_parser.y" /* yacc.c:1646  */
     { set_csum16((yyvsp[-3].number), (yyvsp[-1].number), CSUM_TCP6); }
-#line 2310 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2312 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 60:
 #line 541 "trafgen_parser.y" /* yacc.c:1646  */
     { set_csum16((yyvsp[-3].number), (yyvsp[-1].number), CSUM_UDP6); }
-#line 2316 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2318 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 61:
 #line 546 "trafgen_parser.y" /* yacc.c:1646  */
     { set_sequential_inc((yyvsp[-3].number), (yyvsp[-1].number), 1); }
-#line 2322 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2324 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 62:
 #line 548 "trafgen_parser.y" /* yacc.c:1646  */
     { set_sequential_inc((yyvsp[-5].number), (yyvsp[-3].number), (yyvsp[-1].number)); }
-#line 2328 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2330 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 63:
 #line 553 "trafgen_parser.y" /* yacc.c:1646  */
     { set_sequential_dec((yyvsp[-3].number), (yyvsp[-1].number), 1); }
-#line 2334 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2336 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 64:
 #line 555 "trafgen_parser.y" /* yacc.c:1646  */
     { set_sequential_dec((yyvsp[-5].number), (yyvsp[-3].number), (yyvsp[-1].number)); }
-#line 2340 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2342 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 65:
 #line 560 "trafgen_parser.y" /* yacc.c:1646  */
     { set_dynamic_rnd(); }
-#line 2346 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2348 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 66:
@@ -2352,611 +2354,611 @@ yyreduce:
 			for (i = 0; i < max; ++i)
 				set_dynamic_rnd();
 		}
-#line 2356 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2358 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 67:
 #line 571 "trafgen_parser.y" /* yacc.c:1646  */
     { set_dynamic_incdec((yyvsp[-3].number), (yyvsp[-1].number), 1, TYPE_INC); }
-#line 2362 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2364 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 68:
 #line 573 "trafgen_parser.y" /* yacc.c:1646  */
     { set_dynamic_incdec((yyvsp[-5].number), (yyvsp[-3].number), (yyvsp[-1].number), TYPE_INC); }
-#line 2368 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2370 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 69:
 #line 578 "trafgen_parser.y" /* yacc.c:1646  */
     { set_dynamic_incdec((yyvsp[-3].number), (yyvsp[-1].number), 1, TYPE_DEC); }
-#line 2374 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2376 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 70:
 #line 580 "trafgen_parser.y" /* yacc.c:1646  */
     { set_dynamic_incdec((yyvsp[-5].number), (yyvsp[-3].number), (yyvsp[-1].number), TYPE_DEC); }
-#line 2380 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2382 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 71:
 #line 584 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2386 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2388 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 72:
 #line 585 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2392 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2394 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 73:
 #line 586 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2398 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2400 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 74:
 #line 587 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2404 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2406 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 75:
 #line 588 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2410 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2412 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 76:
 #line 589 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2416 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2418 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 77:
 #line 593 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2422 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2424 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 78:
 #line 597 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_add(PROTO_ETH); }
-#line 2428 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2430 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 79:
 #line 601 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2434 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2436 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 80:
 #line 602 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2440 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2442 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 81:
 #line 603 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2446 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2448 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 82:
 #line 607 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2452 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2454 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 83:
 #line 608 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2458 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2460 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 84:
 #line 613 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_bytes(hdr, ETH_DST_ADDR, (yyvsp[0].bytes)); }
-#line 2464 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2466 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 85:
 #line 615 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_bytes(hdr, ETH_SRC_ADDR, (yyvsp[0].bytes)); }
-#line 2470 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2472 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 86:
 #line 617 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, ETH_TYPE, (yyvsp[0].number)); }
-#line 2476 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2478 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 87:
 #line 621 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2482 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2484 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 88:
 #line 625 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_add(PROTO_VLAN); }
-#line 2488 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2490 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 89:
 #line 629 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2494 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2496 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 90:
 #line 630 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2500 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2502 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 91:
 #line 631 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2506 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2508 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 92:
 #line 635 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2512 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2514 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 94:
 #line 641 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, VLAN_TPID, (yyvsp[0].number)); }
-#line 2518 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2520 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 95:
 #line 643 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, VLAN_TPID, ETH_P_8021Q); }
-#line 2524 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2526 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 96:
 #line 645 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, VLAN_TPID, ETH_P_8021AD); }
-#line 2530 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2532 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 97:
 #line 647 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, VLAN_TCI, (yyvsp[0].number)); }
-#line 2536 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2538 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 98:
 #line 649 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, VLAN_PCP, (yyvsp[0].number)); }
-#line 2542 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2544 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 99:
 #line 651 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, VLAN_DEI, (yyvsp[0].number)); }
-#line 2548 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2550 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 100:
 #line 653 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, VLAN_VID, (yyvsp[0].number)); }
-#line 2554 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2556 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 101:
 #line 657 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2560 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2562 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 102:
 #line 661 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2566 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2568 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 103:
 #line 662 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2572 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2574 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 104:
 #line 663 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2578 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2580 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 105:
 #line 668 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, ARP_OPER, ARPOP_REQUEST); }
-#line 2584 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2586 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 106:
 #line 670 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, ARP_OPER, ARPOP_REPLY); }
-#line 2590 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2592 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 107:
 #line 672 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, ARP_OPER, (yyvsp[0].number)); }
-#line 2596 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2598 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 108:
 #line 674 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, ARP_OPER, ARPOP_REQUEST); }
-#line 2602 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2604 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 109:
 #line 676 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, ARP_OPER, ARPOP_REPLY); }
-#line 2608 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2610 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 110:
 #line 678 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, ARP_HTYPE, (yyvsp[0].number)); }
-#line 2614 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2616 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 111:
 #line 680 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, ARP_PTYPE, (yyvsp[0].number)); }
-#line 2620 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2622 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 112:
 #line 682 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_bytes(hdr, ARP_SHA, (yyvsp[0].bytes)); }
-#line 2626 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2628 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 113:
 #line 684 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_bytes(hdr, ARP_THA, (yyvsp[0].bytes)); }
-#line 2632 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2634 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 114:
 #line 686 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u32(hdr, ARP_SPA, (yyvsp[0].ip4_addr).s_addr); }
-#line 2638 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2640 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 115:
 #line 688 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u32(hdr, ARP_TPA, (yyvsp[0].ip4_addr).s_addr); }
-#line 2644 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2646 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 116:
 #line 691 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_add(PROTO_ARP); }
-#line 2650 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2652 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 117:
 #line 695 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2656 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2658 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 118:
 #line 699 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2662 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2664 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 119:
 #line 700 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2668 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2670 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 120:
 #line 701 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2674 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2676 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 121:
 #line 706 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u8(hdr, IP4_VER, (yyvsp[0].number)); }
-#line 2680 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2682 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 122:
 #line 708 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u8(hdr, IP4_IHL, (yyvsp[0].number)); }
-#line 2686 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2688 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 123:
 #line 710 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u32(hdr, IP4_DADDR, (yyvsp[0].ip4_addr).s_addr); }
-#line 2692 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2694 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 124:
 #line 712 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u32(hdr, IP4_SADDR, (yyvsp[0].ip4_addr).s_addr); }
-#line 2698 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2700 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 125:
 #line 714 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u8(hdr, IP4_PROTO, (yyvsp[0].number)); }
-#line 2704 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2706 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 126:
 #line 716 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u8(hdr, IP4_TTL, (yyvsp[0].number)); }
-#line 2710 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2712 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 127:
 #line 718 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u8(hdr, IP4_DSCP, (yyvsp[0].number)); }
-#line 2716 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2718 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 128:
 #line 720 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u8(hdr, IP4_ECN, (yyvsp[0].number)); }
-#line 2722 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2724 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 129:
 #line 722 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_u8(hdr, IP4_TOS, (yyvsp[0].number)); }
-#line 2728 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2730 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 130:
 #line 724 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, IP4_LEN, (yyvsp[0].number)); }
-#line 2734 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2736 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 131:
 #line 726 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, IP4_ID, (yyvsp[0].number)); }
-#line 2740 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2742 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 132:
 #line 728 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, IP4_FLAGS, (yyvsp[0].number)); }
-#line 2746 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2748 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 133:
 #line 729 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, IP4_DF, 1); }
-#line 2752 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2754 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 134:
 #line 730 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, IP4_MF, 1); }
-#line 2758 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2760 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 135:
 #line 732 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, IP4_FRAG_OFFS, (yyvsp[0].number)); }
-#line 2764 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2766 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 136:
 #line 734 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, IP4_CSUM, (yyvsp[0].number)); }
-#line 2770 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2772 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 137:
 #line 738 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_add(PROTO_IP4); }
-#line 2776 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2778 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 138:
 #line 742 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2782 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2784 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 139:
 #line 746 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2788 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2790 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 140:
 #line 747 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2794 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2796 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 141:
 #line 748 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2800 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2802 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 142:
 #line 753 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, UDP_SPORT, (yyvsp[0].number)); }
-#line 2806 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2808 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 143:
 #line 755 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, UDP_DPORT, (yyvsp[0].number)); }
-#line 2812 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2814 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 144:
 #line 757 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, UDP_LEN, (yyvsp[0].number)); }
-#line 2818 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2820 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 145:
 #line 759 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, UDP_CSUM, (yyvsp[0].number)); }
-#line 2824 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2826 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 146:
 #line 763 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_add(PROTO_UDP); }
-#line 2830 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2832 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 147:
 #line 767 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2836 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2838 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 148:
 #line 771 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2842 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2844 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 149:
 #line 772 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2848 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2850 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 150:
 #line 773 "trafgen_parser.y" /* yacc.c:1646  */
     { }
-#line 2854 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2856 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 151:
 #line 778 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_SPORT, (yyvsp[0].number)); }
-#line 2860 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2862 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 152:
 #line 780 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_DPORT, (yyvsp[0].number)); }
-#line 2866 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2868 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 153:
 #line 782 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be32(hdr, TCP_SEQ, (yyvsp[0].number)); }
-#line 2872 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2874 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 154:
 #line 784 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be32(hdr, TCP_ACK_SEQ, (yyvsp[0].number)); }
-#line 2878 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2880 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 155:
 #line 786 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_DOFF, (yyvsp[0].number)); }
-#line 2884 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2886 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 156:
 #line 787 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_CWR, 1); }
-#line 2890 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2892 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 157:
 #line 788 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_ECE, 1); }
-#line 2896 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2898 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 158:
 #line 789 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_URG, 1); }
-#line 2902 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2904 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 159:
 #line 790 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_ACK, 1); }
-#line 2908 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2910 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 160:
 #line 791 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_PSH, 1); }
-#line 2914 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2916 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 161:
 #line 792 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_RST, 1); }
-#line 2920 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2922 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 162:
 #line 793 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_SYN, 1); }
-#line 2926 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2928 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 163:
 #line 794 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_FIN, 1); }
-#line 2932 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2934 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 164:
 #line 796 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_WINDOW, (yyvsp[0].number)); }
-#line 2938 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2940 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 165:
 #line 798 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_CSUM, (yyvsp[0].number)); }
-#line 2944 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2946 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 166:
 #line 800 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_field_set_be16(hdr, TCP_URG_PTR, (yyvsp[0].number)); }
-#line 2950 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2952 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
   case 167:
 #line 804 "trafgen_parser.y" /* yacc.c:1646  */
     { proto_add(PROTO_TCP); }
-#line 2956 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2958 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
     break;
 
 
-#line 2960 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
+#line 2962 "trafgen/trafgen_parser.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires
