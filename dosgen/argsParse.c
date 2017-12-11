@@ -499,6 +499,54 @@ void dhcp_flood(int argc, char **argv)
 	}
 }
 
+//-----------NTP flood-----------//
+void ntp_flood(int argc, char **argv)
+{
+	int payload_len = 0;
+	char *src_ip = NULL;
+	char *dst_ip = NULL;
+
+	int c;
+	opterr = 0;
+	while ((c = getopt(argc, argv, "d:s:p:h")) != -1)
+	{
+		switch (c)
+		{
+			case 'd':
+				dst_ip = optarg;
+				strreplace(dst_ip, '.', ',');
+				break;
+			case 's':
+				src_ip = optarg;
+				strreplace(src_ip, '.', ',');
+				break;
+			case 'p':
+				payload_len = atoi(optarg);
+				break;
+			case 'h':
+				print_help_and_die();
+				break;
+			default:
+				print_help_and_die();
+		}
+	}
+
+	if (dst_ip && src_ip)
+	{
+        printf("DEBUG: source: %s  dst: %s\n", src_ip, dst_ip);
+		char *err = prepare_ntp(src_ip, dst_ip, payload_len);
+		if (err != NULL)
+		{
+			printf("ERROR: %s\n", err);
+		}
+	}
+	else
+	{
+		printf("\nRequired argument missing\n");
+		print_help_and_die();
+	}
+}
+
 
 // Vstup: argc, argv. Výstup: flood_type_index, flood_argc
 bool find_flood(int argc, char **argv, int *flood_type_index, int *flood_argc)

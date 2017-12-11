@@ -213,8 +213,8 @@ string trafgen_ntp_cfg =
 				"64, "/* IPv4 TTL */
 				"17, "/* Proto UDP */
 				"csumip(14, 33), "/* IPv4 Checksum (IP header from, to) */
-				"192,168,124,129 "/* Source IP */
-				"192,168,124,14 "/* Dest IP */
+				"%s "/* Source IP */
+				"%s "/* Dest IP */
 				"c16(1123), "/* UDP Source Port */
 				"c16(123), "/* UDP Dest Port */
 				"c16(16), "/* Length */

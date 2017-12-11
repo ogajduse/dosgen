@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "trafgen_wrapper.h"
 
 void setup_optarg()
@@ -146,6 +147,18 @@ char * prepare_http(const char *src_ip, const char *src_port, const char *dst_ip
     }
     // Zápis vstupných argumentov do reťazca "trafgen_syn_cfg" a následné uloženie do dočasného súboru
     fprintf(cfg, trafgen_http_cfg.c_str(), 40+len, src_ip, dst_ip, src_port, dst_port, len);
+    fclose(cfg);
+}
+
+char * prepare_ntp(const char * src_ip, const char *dst_ip, const unsigned len){
+    char *cfg_file_name = "tmp.cfg";
+    FILE *cfg = fopen(cfg_file_name, "a");
+    if (cfg == NULL)
+    {
+        return "Failed to open config file";
+    }
+
+    fprintf(cfg, trafgen_ntp_cfg.c_str(), src_ip, dst_ip);
     fclose(cfg);
 }
 
