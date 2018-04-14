@@ -1,0 +1,12 @@
+---
+- name: restart firehol
+  service:
+    name: firehol
+    state: restarted
+    enabled: yes
+
+- name: restart ntpd
+  service:
+    name: ntpd
+    state: restarted
+    enabled: yes

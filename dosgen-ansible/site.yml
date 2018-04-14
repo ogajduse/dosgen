@@ -1,0 +1,7 @@
+---
+- name: apply the configuration to the ntp server
+  hosts: f8
+  remote_user: root
+
+  roles:
+  - ntp

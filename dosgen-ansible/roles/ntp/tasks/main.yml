@@ -1,0 +1,46 @@
+---
+- name: configure fedora repository
+  yum_repository:
+    name: dosgen-fedora-$releasever-$basearch
+    description: DoSgen fedora $releasever - $basearchrepo
+    file: dosgen
+    baseurl: http://fedora-archive.ip-connect.vn.ua/fedora/linux/releases/14/Everything/x86_64/os/
+    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
+    gpgcheck: yes
+
+- name: configure fedora updates repository
+  yum_repository:
+    name: dosgen-fedora-$releasever-$basearch-updates
+    description: DoSgen fedora $releasever - $basearchrepo updates
+    file: dosgen
+    baseurl: http://fedora-archive.ip-connect.vn.ua/fedora/linux/updates/14/x86_64/
+    gpgkey: file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$basearch
+    gpgcheck: yes
+
+- name: disable default fedora repository
+  yum_repository:
+    file: fedora
+    state: absent
+    name: fedora
+
+- name: disable default fedora updates repository
+  yum_repository:
+    file: fedora-updates
+    state: absent
+    name: updates
+
+- name: install ntp, firehol, libselinux-python packages
+  yum:
+    name:
+      - ntp
+      - firehol
+      - libselinux-python
+    state: installed
+
+- name: deploy configuration file for ntpd
+  template: src=ntp.conf.j2 dest=/etc/ntp.conf
+  notify: restart ntpd
+
+- name: deploy configuration file for firehol
+  template: src=firehol.conf.j2 dest=/etc/firehol/firehol.conf
+  notify: restart firehol
