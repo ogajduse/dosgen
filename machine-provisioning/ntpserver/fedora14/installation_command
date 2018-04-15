@@ -1,0 +1,4 @@
+sudo virt-install --name ntp-f14 --memory 1024 --vcpus=1 \
+--disk size=10 --os-variant=fedora14 \
+--location=http://archives.fedoraproject.org/pub/archive/fedora/linux/releases/14/Fedora/x86_64/os/ \
+-x "ks=http://ts.unitedclans.tk/~file/fedora14.ks"
