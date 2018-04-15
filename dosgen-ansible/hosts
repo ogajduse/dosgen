@@ -1,2 +1,2 @@
-[f8]
+[ntp]
 192.168.124.223 ansible_user=root
