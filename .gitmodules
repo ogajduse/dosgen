@@ -1,0 +1,3 @@
+[submodule "dosgen-tools/dns/dns-amplification-toolkit"]
+	path = dosgen-tools/dns/dns-amplification-toolkit
+	url = git@github.com:layer4technologies/dns-amplification-toolkit.git
