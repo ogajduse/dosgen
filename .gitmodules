@@ -1,3 +1,6 @@
 [submodule "dosgen-tools/dns/dns-amplification-toolkit"]
 	path = dosgen-tools/dns/dns-amplification-toolkit
 	url = git@github.com:layer4technologies/dns-amplification-toolkit.git
+[submodule "dosgen-tools/ntp/ntpscanner"]
+	path = dosgen-tools/ntp/ntpscanner
+	url = git@github.com:suedadam/ntpscanner.git
