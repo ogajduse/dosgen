@@ -4,3 +4,6 @@
 [submodule "dosgen-tools/ntp/ntpscanner"]
 	path = dosgen-tools/ntp/ntpscanner
 	url = git@github.com:suedadam/ntpscanner.git
+[submodule "dosgen-tools/snmp/snmpscan"]
+	path = dosgen-tools/snmp/snmpscan
+	url = git@github.com:95ulisse/snmpscan.git
