@@ -27,5 +27,6 @@ make
 ```
 
 # Start the attack!
+```shell
 ./dosgen --help
-
+```
