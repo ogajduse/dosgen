@@ -1,0 +1,13 @@
+---
+- name: start_snmpd
+  service:
+    name: snmpd
+    state: started
+    enabled: yes
+
+- name: restart_snmpd
+  service:
+    name: snmpd
+    state: restarted
+    enabled: yes
+

@@ -1,0 +1,40 @@
+---
+- name: Install required snmp packages
+  dnf:
+    name:
+      - net-snmp
+      - net-snmp-utils
+    state: latest
+
+- name: Enable snmp trough firewall
+  firewalld:
+    service: snmp
+    state: enabled
+    immediate: yes
+    permanent: true
+
+- name: start_snmpd
+  service:
+    name: snmpd
+    state: started
+    enabled: yes
+
+- name: deploy configuration file for snmpd
+  template: src=snmpd.conf.j2 dest=/etc/snmp/snmpd.conf
+  register: snmpd_template_deploy
+
+- name: restart_snmpd
+  service:
+    name: snmpd
+    state: restarted
+    enabled: yes
+  when: snmpd_template_deploy.changed
+
+- name: test if snmp works
+  snmp_facts:
+    host: '{{ inventory_hostname }}'
+    version: v2c
+    community: public
+  delegate_to: localhost
+  register: snmp_out
+  failed_when: ansible_kernel not in snmp_out.ansible_facts.ansible_sysdescr

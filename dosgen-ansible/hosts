@@ -1,2 +1,5 @@
 [ntp]
 192.168.124.223 ansible_user=root
+
+[snmp]
+192.168.124.126 ansible_user=root ansible_python_interpreter=/usr/bin/python3
