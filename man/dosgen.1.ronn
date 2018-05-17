@@ -1,0 +1,119 @@
+dosgen(1) -- DoS attack generator
+=============================================
+
+## SYNOPSIS
+
+`dosgen` [format...]<br>
+`dosgen` -i virbr0 -P 4 --ntp -s <SOURCE_IP> -d <DESTINATION_IP><br>
+
+
+## DESCRIPTION
+
+**DoSgen** (Denial of Service Generator) generates DoS attacks to
+the specified host in a network. This tool is intended for vulnerability or
+stress testing of computer networks. Testing on 10 GbE infrastructure
+is also possible. This application needs superuser rights. It is built
+on the top of the netsniff-ng toolkit and uses trafgen tool for generating
+floods.
+
+DoSgen has already implemented these attacks:
+
+    SYN flood
+    RST flood
+    UDP flood
+    ICMP flood
+    ARP flood
+    DNS flood
+    DHCP starvation
+    HTTP flood
+    Slow Loris
+    RUDY
+    Slow Read
+    Dictionary attack on SSH
+    NTP flood
+    SNMP flood
+
+For each attack there are several switches available.
+
+## OPTIONS
+
+Attack types:
+
+  * `--syn`:
+    SYN flood
+  * `--rst`:
+     RST flood
+  * `--udp`:
+    UDP flood
+  * `--icmp`:
+    ICMP flood
+  * `--arp`:
+    ARP flood
+  * `--dns`:
+    DNS flood
+  * `--dhcp`:
+     DHCP starvation   
+  * `--http`:
+    HTTP flood
+  * `--slowLoris`:
+    Slowloris
+  * `--rudy`:
+    R-U Dead Yet
+  * `--slowRead`:
+    Slow Read
+  * `--ssh`:
+    SSH dictionary password cracker
+  * `--ntp`:
+    NTP flood (using monlist)
+  * `--snmp`:
+    SNMP flood (using SNMPv2 GETBULK)
+
+Definitions:
+
+  * `-i`:
+    interface (e.g. eth0)
+  * `-P`:
+    number of processes / path (HTTP flood, RUDY, Slow Read)
+  * `-s`:
+    source IP address
+  * `-d`:
+    destination IP address
+  * `-S`:
+    source port
+  * `-D`:
+    destination port
+  * `-n`:
+    DNS name
+  * `-p`:
+    payload length / path (HTTP flood, RUDY, Slow Read)
+  * `-c`:
+    number of connections (Slowloris, RUDY, SlowRead)
+  * `-t`:
+    timeout (Slowloris, RUDY)
+  * `-T`:
+    duration
+  * `-u`:
+    user (SSH)
+  * `-v`:
+    number of threads(HTTP flood)
+  * `-l`:
+    dictionary (SSH)
+  * `-w`:
+    window size (Slow Read)
+  * `-b`:
+    buffer size (Slow Read)
+  * `-n`:
+    interval for reading from buffer (Slow Read)
+  * `-r`:
+    amount of time before closing the socket (HTTP flood)
+  * `-h`:
+    help, shows this message    
+
+## SEE ALSO
+
+netsniff-ng(8), trafgen(8)
+
+## AUTHORS
+    Peter Halaška (original author)
+    Filip Grégr
+    Ondřej Gajdušek
