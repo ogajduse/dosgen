@@ -62,7 +62,7 @@ function parseAttacksArguments(arguments) {
     var attacksSettings = {};
 
     for (var attackFullName in arguments) {
-        if (arguments.hasOwnProperty(attackFullName)) {
+        if (Object.prototype.hasOwnProperty.call(arguments, attackFullName)) {
             var attackValue = arguments[attackFullName];
             var attackTypeAndArg = attackFullName.split(":");
             if (attackTypeAndArg.length != 2)
