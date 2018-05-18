@@ -13,7 +13,7 @@ var dosgen = require("./routes/dosgen");
 var app = express();
 var configFileName = "config.json";
 var config = JSON.parse(fs.readFileSync(path.join(__dirname, configFileName)));
-GLOBAL.config = config;
+global.config = config;
 var passport = require(path.join(__dirname, '/passport.js'));
 var auth = require(path.join(__dirname, '/routes/auth'))(passport);
 

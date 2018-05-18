@@ -1,7 +1,7 @@
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
-var adminUsername = GLOBAL.config.username;
-var adminPassword = GLOBAL.config.password;
+var adminUsername = global.config.username;
+var adminPassword = global.config.password;
 //Lokálne prihlasovanie
 passport.use(new LocalStrategy({
         usernameField: "username",
