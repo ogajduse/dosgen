@@ -1,5 +1,8 @@
 #!/bin/sh
 
+BASEAPP_NAME=dosgen
+SUBAPP_NAME=web
+APP_NAME="$BASEAPP_NAME-$SUBAPP_NAME"
 #Užívateľ, ponechať root
 USER="root"
 #Enviroment, môže ostať production
@@ -7,26 +10,39 @@ NODE_ENV="production"
 #Port aplikácie
 PORT="8888"
 #Cesta k zložke, kde sa nachádza server.js
-APP_DIR="/home/user/app/DoSgenWEB"
+APP_DIR="/home/user/app/$APP_NAME"
 #Server.js, hlavný súbor aplikácie
 NODE_APP="server.js"
 CONFIG_DIR="$APP_DIR"
-PID_DIR="$APP_DIR/pid"
-PID_FILE="$PID_DIR/app.pid"
-LOG_DIR="$APP_DIR/log"
-LOG_FILE="$LOG_DIR/app.log"
+PID_DIR="/var/run"
+PID_FILE="$PID_DIR/$APP_NAME.pid"
+LOG_DIR="/var/log/$BASEAPP_NAME/$SUBAPP_NAME"
+LOG_FILE="$LOG_DIR/$APP_NAME.log"
 #Automatické vyhľadanie binárneho súboru "nodejs",
 #v niektorých systémoch je inštalovaný ako "node".
 #V takom prípade daný údaj prepísať.
-NODE_EXEC=$(which nodejs)
-APP_NAME="DoSgenWEB"
+NODE_EXEC=$(which node)
 
 
 USAGE="Usage: $0 {start|stop|restart|status} [--force]"
 FORCE_OP=false
 
+ensure_root() {
+    if [ "$EUID" -ne 0 ]; then
+        echo "Please run as root"
+        exit 1
+    fi
+}
+
 pid_file_exists() {
     [ -f "$PID_FILE" ]
+}
+
+app_dir_exists() {
+    if ! [ -d "$APP_DIR" ]; then
+        echo $APP_DIR does not exist
+	exit 1
+    fi
 }
 
 get_pid() {
@@ -61,17 +77,19 @@ remove_pid_file() {
 }
 
 start_app() {
-    if pid_file_exists
-    then
-        if is_running
-        then
+    ensure_root
+    app_dir_exists
+    if [ pid_file_exists == 0 ]; then
+        if is_running; then
             PID=$(get_pid)
             echo "$APP_NAME already running with pid $PID"
             exit 1
         else
-            echo "$APP_NAME stopped, but pid file exists"
-            if [ $FORCE_OP = true ]
-            then
+            if ! pid_file_exists; then
+                echo "$APP_NAME stopped, but pid file exists"
+            fi
+            
+	    if [ $FORCE_OP = true ]; then
                 echo "Forcing start anyways"
                 remove_pid_file
                 start_it
@@ -83,18 +101,16 @@ start_app() {
 }
 
 stop_app() {
-    if pid_file_exists
-    then
-        if is_running
-        then
+    ensure_root
+    if pid_file_exists; then
+        if is_running; then
             echo "Stopping $APP_NAME ..."
             stop_process
             remove_pid_file
             echo "$APP_NAME stopped"
         else
             echo "$APP_NAME already stopped, but pid file exists"
-            if [ $FORCE_OP = true ]
-            then
+            if [ $FORCE_OP = true ]; then
                 echo "Forcing stop anyways ..."
                 remove_pid_file
                 echo "$APP_NAME stopped"
@@ -109,10 +125,8 @@ stop_app() {
 }
 
 status_app() {
-    if pid_file_exists
-    then
-        if is_running
-        then
+    if pid_file_exists; then
+        if is_running; then
             PID=$(get_pid)
             echo "$APP_NAME running with pid $PID"
         else
