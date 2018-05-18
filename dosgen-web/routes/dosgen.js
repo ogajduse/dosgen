@@ -24,7 +24,7 @@ router.post("/fire", function (req, res, next) {
     var args = parseAttacksArguments(req.body);
     /* Spustenie nástroja DoSgen: <cesta k binárnemu súboru>,
     <zozbierané argumenty s hodnotami> */
-    dosgenProc = spawn("/home/user/app/DoSgen/dosgen", args, {detached: true});
+    dosgenProc = spawn("/home/user/app/dosgen/dosgen", args, {detached: true});
     //Štandardný výstup
     dosgenProc.stdout.on('data', function (data) {
         io.sockets.emit("stdoutData", data.toString());
