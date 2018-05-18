@@ -1,5 +1,5 @@
 {
-  "name": "DoSgen_Web_GUI",
+  "name": "dosgen-web",
   "version": "0.0.0",
   "private": true,
   "scripts": {
