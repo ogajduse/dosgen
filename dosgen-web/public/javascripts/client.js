@@ -134,7 +134,15 @@ var attacks = [{
       ["l", "Dictionary", "Enter full path", asterisk]
     ]
   },
-
+  {
+    "name": "NTP Flood ", //Meno (titulok)
+    "id": "ntp", //ID
+    "fields": [
+      ["s", "Source IP address", "Specify your target", asterisk],
+      ["d", "Destination IP address", "Specify NTP server", asterisk],
+      ["p", "Port", "Empty means port random"],
+    ]
+  },
 ];
 
 $(function() {
