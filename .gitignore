@@ -5,6 +5,11 @@ cmake-build-debug/
 dosgen/dosgen
 dosgen/tmp.cfg
 
+dosgen/trafgen/trafgen/trafgen_lexer.yy.c
+dosgen/trafgen/trafgen/trafgen_parser.tab.c
+dosgen/trafgen/trafgen/trafgen_parser.tab.h
+
+
 ### Generated from https://github.com/github/gitignore/ project
 # Prerequisites
 *.d
