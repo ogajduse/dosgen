@@ -1,43 +1,64 @@
-CC=g++
-CFLAGS=-g -Wno-write-strings -std=c++11 -O2
-LIBS= -lnl-3 -lnl-genl-3 -lnl-3 -lssh -lm -pthread -z muldefs 
+CC = g++ #gcc
+CXX = g++
+
+CFLAGS = -g
+CFLAGS += -Wno-write-strings
+#CFLAGS += -std=c++11
+CFLAGS += -O2
+
+CPPFLAGS = -std=c++11
+
+LIBS = -lnl-3
+LIBS += -lnl-genl-3
+LIBS += -lnl-3
+LIBS += -lssh
+LIBS += -lm
+LIBS += -pthread
+LIBS += -z muldefs
+
+.PHONY: install, clean
 
 all: dosgen
 
 trafgen_wrapper.o: trafgen_wrapper.c 
-	g++ -c $(CFLAGS) -o $@ $^
+	$(CC) -c $(CFLAGS) -o $@ $^
 
 libtrafgen.a:
-	(cd trafgen; make trafgen && cp libtrafgen.a ../)
+	$(MAKE) trafgen -C trafgen
+	cp trafgen/libtrafgen.a ./
 
 slowloris.o: slowloris.cpp
-	g++ $^ -c $(CFLAGS) -o $@ 
+	$(CC) $^ -c $(CFLAGS) $(CPPFLAGS) -o $@
 
 httpflood.o: httpFlood.cpp
-	g++ $^ -c $(CFLAGS) -o $@ 
+	$(CC) $^ -c $(CFLAGS) $(CPPFLAGS) -o $@
 
 slowRead.o: slowRead.cpp
-	g++ $^ -c $(CFLAGS) -o $@ 
+	$(CC) $^ -c $(CFLAGS) $(CPPFLAGS) -o $@
 
 rudy.o: rudy.cpp
-	g++ $^ -c $(CFLAGS) -o $@ 
+	$(CC) $^ -c $(CFLAGS) $(CPPFLAGS) -o $@
 
 dosgen.o: dosgen.c
-	g++ -c $(CFLAGS) -o $@ $^
+	$(CC) -c $(CFLAGS) -o $@ $^
 
 halaska.o: argsParse.c
-	g++ -c $(CFLAGS) -o $@ $^
+	$(CC) -c $(CFLAGS) -o $@ $^
 
 sshPass.o: sshPass.c
-	g++ $^ -c $(CFLAGS) -o $@ 
+	$(CC) $^ -c $(CFLAGS) $(CPPFLAGS) -o $@
 
 # DoSgen
 dosgen:  dosgen.o slowloris.o rudy.o httpflood.o sshPass.o slowRead.o argsParse.o trafgen_wrapper.o libtrafgen.a 
-	g++  $^ $(LIBS) -o $@
+	$(CC)  $^ $(LIBS) -o $@
+
+install:
+	mkdir -p $(DESTDIR)/usr/bin
+	install -m 0755 dosgen $(DESTDIR)/usr/bin/dosgen
 
 clean:
-	rm dosgen
-	rm *.o
-	rm *.a
-
-
+	$(RM) dosgen
+	$(RM) *.o
+	$(RM) *.a
+	$(MAKE) clean -C trafgen
+	@echo Clean completed!
