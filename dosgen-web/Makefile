@@ -27,14 +27,18 @@ install-env : $(ENV_FILES)
 	mkdir -p $(DESTDIR)/$(ENV_DIR)
 	install -m 0644 $(ENV_FILES) $(DESTDIR)/$(ENV_DIR)
 
+install : install-env
+
 ifneq ($(SYSTEMD_EXIST),) # systemd
 install : install-env 
 	mkdir -p $(DESTDIR)/$(SYSTEMD_UNIT_DIR) 
 	$(INSTALL_SYSTEMD_UNIT) $(SERVICE_FILES) $(DESTDIR)/$(SYSTEMD_UNIT_DIR)
 else # SysVinit
+ifneq ($(SYSVINIT_EXIST),) # SysVinit
 install : install-env
 	mkdir -p $(DESTDIR)/$(INITV_DIR)
 	$(INSTALL_INITV_SCRIPT) $(INIT_FILES) $(DESTDIR)/$(INITV_DIR)
+endif
 endif
 
 update : install
