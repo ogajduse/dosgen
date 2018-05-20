@@ -35,5 +35,6 @@ make
 # Building DoSgen RPM
 ```shell
 # in DoSgen root
+make test-srpm
 mock -r fedora-rawhide-x86_64 rpmbuild/SRPMS/dosgen-*.src.rpm
 ```
