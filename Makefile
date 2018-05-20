@@ -19,7 +19,7 @@ TARBALL     = $(DISTDIR).tar.gz
 .PHONY: build install rpm test-rpm test-srpm tar devel release clean
 
 
-CODE_DIRS   = dosgen # init-script dosgen-web
+CODE_DIRS   = dosgen dosgen-web
 MAN_DIRS    = man
 
 all :: all-code all-man
@@ -32,10 +32,11 @@ all :: all-code all-man
 	@$(foreach d,$(MAN_DIRS), $(MAKE) -C $(d) $* || exit 1; )
 
 install :: install-code install-man
+# TODO: install README.md License
 
 $(TARBALL): clean
 	mkdir $(DISTDIR)
-	cp -r $(CODE_DIRS) configure README.md man Makefile dosgen.spec $(DISTDIR)
+	cp -r $(CODE_DIRS) $(MAN_DIRS) configure README.md Makefile $(NAME).spec $(DISTDIR)
 	tar -czf $(TARBALL) $(DISTDIR)
 	$(RM) -r $(DISTDIR)
 
