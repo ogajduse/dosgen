@@ -15,9 +15,10 @@ ENV_FILES            = dosgen-web.env
 INSTALL_SYSTEMD_UNIT = install -m 0644
 INSTALL_INITV_SCRIPT = install -m 0755
 
-.PHONY: test install install-env install-npm update clean
+.PHONY: install install-env install-npm update clean
 
-all : install-npm
+all :
+	@echo Specify target. Targets available: install install-env install-npm update clean
 
 install-npm :
 	npm install
