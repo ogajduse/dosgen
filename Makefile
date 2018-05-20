@@ -20,22 +20,18 @@ TARBALL     = $(DISTDIR).tar.gz
 
 
 CODE_DIRS   = dosgen # init-script dosgen-web
-CONF_DIRS   =
 MAN_DIRS    = man
 
-all :: all-code all-man #all-conf
+all :: all-code all-man
 
 
 %-code : Makefile
 	@$(foreach d,$(CODE_DIRS), $(MAKE) -C $(d) $* || exit 1; )
 
-#%-conf : Makefile
-#	@$(foreach d,$(CONF_DIRS), $(MAKE) -C $(d) $* || exit 1; )
-
 %-man : Makefile
 	@$(foreach d,$(MAN_DIRS), $(MAKE) -C $(d) $* || exit 1; )
 
-install :: install-code install-man #install-conf
+install :: install-code install-man
 
 $(TARBALL): clean
 	mkdir $(DISTDIR)
@@ -60,4 +56,4 @@ rpm: $(TARBALL)
 
 release: tar test-srpm
 
-clean :: clean-code clean-man #clean-conf
+clean :: clean-code clean-man
