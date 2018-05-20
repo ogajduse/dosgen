@@ -1,6 +1,6 @@
-# How to install dosgen on Fedora
+# How to install DoSgen on Fedora
 
-## Install packages required by dosgen
+## Install packages required by DoSgen
 ```shell
 dnf -y install flex bison libnl3-devel libssh-devel
 ```
@@ -15,18 +15,25 @@ dnf -y install git make pkg-config gcc-c++
 dnf -y install tcptrack nmap httping john iftop nload iputils net-tools
 ```
 
-## Download dosgen repository
+## Download DoSgen repository
 ```shell
-cd ~
 git clone https://github.com/ogajduse/dosgen.git
 cd dosgen/dosgen
 ```
-# Run make
-```
+
+## Run make
+```shell
 make
 ```
+# Running DoSgen
 
-# Start the attack!
+## Start the attack!
 ```shell
 ./dosgen --help
+```
+
+# Building DoSgen RPM
+```shell
+# in DoSgen root
+mock -r fedora-rawhide-x86_64 rpmbuild/SRPMS/dosgen-*.src.rpm
 ```
