@@ -34,8 +34,24 @@ make %{?_smp_mflags}
 %install
 %make_install
 
+%if 0%{?fedora} || 0%{?rhel} >= 7
+mkdir -p $RPM_BUILD_ROOT/%{_unitdir}
+install -m 0644 %{name}-web/%{name}-web.service $RPM_BUILD_ROOT/%{_unitdir}/
+%else
+mkdir -p $RPM_BUILD_ROOT/%{_initrddir}
+install -m 0755 %{name}-web/%{name}-web.init $RPM_BUILD_ROOT/%{_initrddir}/%{name}-web
+%endif
+
 %files
 %{_bindir}/%{name}
+
+%{_sysconfdir}/sysconfig/%{name}-web.env
+
+%if 0%{?fedora} || 0%{?rhel} >= 7
+%{_unitdir}/%{name}-web.service
+%else
+%{_initrddir}/%{name}-web
+%endif
 
 %doc %{_mandir}/man8/dosgen.8.gz
 
