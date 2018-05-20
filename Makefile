@@ -58,3 +58,4 @@ rpm: $(TARBALL)
 release: tar test-srpm
 
 clean :: clean-code clean-man
+	@$(RM) $(NAME)*.tar.gz
