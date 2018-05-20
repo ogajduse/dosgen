@@ -1,28 +1,18 @@
 #!/bin/sh
 
-BASEAPP_NAME=dosgen
-SUBAPP_NAME=web
-APP_NAME="$BASEAPP_NAME-$SUBAPP_NAME"
-#Užívateľ, ponechať root
-USER="root"
-#Enviroment, môže ostať production
-NODE_ENV="production"
-#Port aplikácie
-PORT="8888"
-#Cesta k zložke, kde sa nachádza server.js
-APP_DIR="/home/user/app/$APP_NAME"
-#Server.js, hlavný súbor aplikácie
-NODE_APP="server.js"
-CONFIG_DIR="$APP_DIR"
-PID_DIR="/var/run"
-PID_FILE="$PID_DIR/$APP_NAME.pid"
-LOG_DIR="/var/log/$BASEAPP_NAME/$SUBAPP_NAME"
-LOG_FILE="$LOG_DIR/$APP_NAME.log"
-#Automatické vyhľadanie binárneho súboru "nodejs",
-#v niektorých systémoch je inštalovaný ako "node".
-#V takom prípade daný údaj prepísať.
-NODE_EXEC=$(which node)
+ENVFILE=dosgen-web.env
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+if [ -f /etc/sysconfig/$ENVFILE ]; then
+    source /etc/sysconfig/$ENVFILE
+    CURRENT_DIR=""
+elif [ -f $CURRENT_DIR/$ENVFILE ]; then
+    source $CURRENT_DIR/$ENVFILE
+    APP_DIR=$CURRENT_DIR
+else
+    echo Environment file not found!
+    exit 1
+fi
 
 USAGE="Usage: $0 {start|stop|restart|status} [--force]"
 FORCE_OP=false
