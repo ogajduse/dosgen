@@ -1,0 +1,13 @@
+[Unit]
+Description=DoSgen WebUI
+After=syslog.target network.target
+
+[Service]
+Type=forking
+KillMode=process
+EnvironmentFile=-/etc/sysconfig/dosgen-web.env
+PIDFile=${PID_FILE}
+ExecStart=/usr/bin/node ${$APP_DIR}/${NODE_APP}
+
+[Install]
+WantedBy=multi-user.target
