@@ -162,6 +162,18 @@ char * prepare_ntp(const char * src_ip, const char *dst_ip, const unsigned len){
     fclose(cfg);
 }
 
+char * prepare_snmp(const char * src_ip, const char *dst_ip, const unsigned len){
+    char *cfg_file_name = "tmp.cfg";
+    FILE *cfg = fopen(cfg_file_name, "a");
+    if (cfg == NULL)
+    {
+        return "Failed to open config file";
+    }
+
+    fprintf(cfg, trafgen_ntp_cfg.c_str(), src_ip, dst_ip);
+    fclose(cfg);
+}
+
 void start_attack(char *dev, char *proc_num_str)
 {
     int argc = 8; //10

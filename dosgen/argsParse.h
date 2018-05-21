@@ -12,6 +12,7 @@ void arp_flood(int argc, char **argv);
 void dns_flood(int argc, char **argv);
 void dhcp_flood(int argc, char **argv);
 void ntp_flood(int argc, char **argv);
+void snmp_flood(int argc, char **argv);
 bool find_flood(int argc, char **argv, int *flood_type_index, int *flood_argc);																								
 
 

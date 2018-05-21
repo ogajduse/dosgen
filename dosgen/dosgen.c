@@ -151,6 +151,10 @@ int main(int argc, char **argv)
         {
             ntp_flood(flood_argc + 1, flood_argv);
         }
+		else if (strcmp(flood_type, "--snmp") == 0)
+		{
+			snmp_flood(flood_argc + 1, flood_argv);
+		}
 		else
 		{
 			print_help_and_die();

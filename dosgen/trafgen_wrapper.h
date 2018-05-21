@@ -18,6 +18,7 @@ char * prepare_dns(const char *src_ip, const char *src_port, const char *dst_ip,
 char * prepare_dhcp(const unsigned len);
 char * prepare_ntp(const char *src_ip, const char *dst_ip, const unsigned len);
 char * prepare_http(const char *src_ip, const char *src_port, const char *dst_ip, const char *dst_port, const unsigned len);
+char * prepare_snmp(const char *src_ip, const char *dst_ip, const unsigned len);
 void start_attack(char *dev, char *proc_num_str); // char *pps_str
 
 
