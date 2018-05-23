@@ -15,6 +15,7 @@ dosgen/trafgen/trafgen/trafgen_lexer.yy.c
 dosgen/trafgen/trafgen/trafgen_parser.tab.c
 dosgen/trafgen/trafgen/trafgen_parser.tab.h
 
+.idea
 
 ### Generated from https://github.com/github/gitignore/ project
 # Prerequisites
