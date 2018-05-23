@@ -10,6 +10,16 @@ dnf -y install flex bison libnl3-devel libssh-devel
 dnf -y install git make pkg-config gcc-c++
 ```
 
+## Packages needed for documentation
+```shell
+dnf -y install rubygem-ronn
+```
+
+## Packages needed for dosgen-web
+```shell
+dnf -y install nodejs
+```
+
 ## Optional tools which may be useful
 ```shell
 dnf -y install tcptrack nmap httping john iftop nload iputils net-tools
