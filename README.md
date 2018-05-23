@@ -43,6 +43,13 @@ make
 ```
 
 # Building DoSgen RPM
+
+## Prerequisites
+```
+dnf -y install rpm-build mock
+```
+
+## How to build
 ```shell
 # in DoSgen root
 make test-srpm
