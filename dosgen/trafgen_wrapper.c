@@ -170,7 +170,7 @@ char * prepare_snmp(const char * src_ip, const char *dst_ip, const unsigned len)
         return "Failed to open config file";
     }
 
-    fprintf(cfg, trafgen_ntp_cfg.c_str(), src_ip, dst_ip);
+    fprintf(cfg, trafgen_snmp_cfg.c_str(), src_ip, dst_ip);
     fclose(cfg);
 }
 
