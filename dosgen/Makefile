@@ -61,4 +61,5 @@ clean:
 	$(RM) *.o
 	$(RM) *.a
 	$(MAKE) clean -C trafgen
+	$(RM) trafgen/libtrafgen.a
 	@echo Clean completed!
