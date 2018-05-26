@@ -202,86 +202,60 @@ string trafgen_http_cfg = "{"
 			//"drnd(64), "
 			"}";
 
-string trafgen_ntp_cfg =
-		"{0x52,0x54,0x00,0xf9,0xca,0x25, " /* Dst Mac */
-				"0x52,0x54,0x00,0x6c,0x9e,0x15, " /* Src Mac */
-				"c16(0x0800), "/* EtherType */
-				"0b01000101, 0, "/* IPv4 Version, IHL, TOS */
-				"c16(36), "/* IPv4 Total Len */
-				"drnd(2), "/* IPv4 Ident */
-				"0b01000000, 0, "/* IPv4 Flags, Frag Off */
-				"64, "/* IPv4 TTL */
-				"17, "/* Proto UDP */
-				"csumip(14, 33), "/* IPv4 Checksum (IP header from, to) */
-				"%s "/* Source IP */
-				"%s "/* Dest IP */
-				"c16(1123), "/* UDP Source Port */
-				"c16(123), "/* UDP Dest Port */
-				"c16(16), "/* Length */
-				"c16(00), "/* Checksum */
-				/* NTP */
-				"0b00010111, "/* Flags - NTPv2, Private mode */
-				"0, "/* Auth, sequence - None */
-				"3, "/* Implementation - XNTPD */
-				"42, "/* Request code - MON_GETLIST_1 */
-				"c32(0), "/* 4 bytes of padding */
-				"}";
+string trafgen_ntp_cfg = "{"
+            "fill(0xff, 6), "               // Cieľová MAC adresa
+            "0x9c, 0x4e, 0x36, drnd(3), "   // Zdrojová MAC adresa
+            "c16(0x0800), "                 // Ethertype pre IP
+            "0b01000101, 0, "               // Verzia IPv4, IHL, TOS
+            "c16(36), "                     // Celková dĺžka (IP + TCP)
+            "drnd(2), "                     // IPv4 identifikátor
+            "0b01000000, 0, "               // IPv4 flags, bez fragmentácie
+            "64, "                          // TTL (Time to Live)
+            "17, "                          // Protokol UDP
+            "csumip(14, 33), "              // Výpočet kontrolného súčtu IP hlavičky csumip(od, do)
+            "%s "                           // Zdrojová IP adresa
+            "%s "                           // Cieľová IP adresa
+            "c16(1123), "                   // Zdrojový port
+            "c16(123), "                    // Cieľový port
+            "c16(16), "                     // Dĺžka UDP
+            "c16(00), "                     // Výpočet kontrolného súčtu (pre UDP je povolená 0)
+            /* NTP */
+            "0b00010111, "                  /* Flags - NTPv2, Private mode */
+            "0, "                           /* Auth, sequence - None */
+            "3, "                           /* Implementation - XNTPD */
+            "42, "                          /* Request code - MON_GETLIST_1 */
+            "c32(0), "                      /* 4 bytes of padding */
+            "}";
 
-string trafgen_snmp_cfg =
-			"{"
-			"/* Mac Destination */"
-			"0x00, 0x1b, 0x21, 0x3c, 0x9d, 0xf8,"
-			"/* MAC Source */"
-			"0x90, 0xe2, 0xba, 0x0a, 0x56, 0xb4,"
-			"/* IPv4 Protocol */"
-			"c16(0x0800),"
-			"/* IPv4 Version, IHL, TOS */"
-			"0x45, 0,"
-			"/* IPv4 Total Len */"
-			"c16(68),"
-			"/* IPv4 Ident */"
-			"drnd(2),"
-			"/* IPv4 Flags, Frag Off */"
-			"0b00000000, 0b00000000,"
-			"/* IPv4 TTL */"
-			"64,"
-			"/* Proto UDP */"
-			"17,"
-			"/* IPv4 Checksum (IP header from, to) */"
-			"/* csumip(14, 33), */"
-			"/*IP_CSUM_DEFAULT,*/"
-			"csumip(14, 33),"
-			"/* Source IP */"
-			"192,168,124,1"
-			"/* Dest IP */"
-			"192,168,124,126"
-			"/* UDP Source Port */"
-			"drnd(2),"
-			"/* UDP Destination Port */"
-			"c16(161),"
-			"/* UDP Length */"
-			"const16(48),"
-			"/* UDP checksum (Can be zero) */"
-			"const16(0),"
-
+string trafgen_snmp_cfg = "{"
+            "fill(0xff, 6), "               // Cieľová MAC adresa
+            "0x9c, 0x4e, 0x36, drnd(3), "   // Zdrojová MAC adresa
+            "c16(0x0800), "                 // Ethertype pre IP
+            "0b01000101, 0, "               // Verzia IPv4, IHL, TOS
+			"c16(68),"                      // Celková dĺžka (IP + TCP)
+			"drnd(2),"                      // IPv4 identifikátor
+			"0b00000000, 0b00000000,"       // IPv4 flags, bez fragmentácie
+			"64,"                           // TTL (Time to Live)
+			"17,"                           // Protokol UDP
+			"csumip(14, 33),"               // Výpočet kontrolného súčtu IP hlavičky csumip(od, do)
+            "%s "                           // Zdrojová IP adresa
+            "%s "                           // Cieľová IP adresa
+			"drnd(2),"                      // Zdrojový port
+			"c16(161),"                     // Cieľový port
+			"const16(48),"                  // Dĺžka UDP
+			"const16(0),"                   // Výpočet kontrolného súčtu (pre UDP je povolená 0)
+            /*SNMP*/
 			"0x30,0x26,0x02,0x01,"
-			"/*version*/"
-			"0x01,"
-			"/* ? */"
-			"0x04,0x06,"
-			"\"public\","
-
+			"0x01,"                         // Verze
+			"0x04,0x06,"                    // ?
+			"\"public\","                   // Community string
 			"0xa5,0x19,0x02,0x04,"
-
 			"drnd(4),"
 			"/* txid, 0x5b,0x16,0x2f,0x89,*/"
-
 			"0x02,0x01,0x00,0x02,0x01,"
-
-			"/* max repet */"
+    		"/* max repet */"
 			"/* 0x0a, */"
 			"0x3a,"
-
 			"0x30,0x0b,"
 			"0x30,0x09,0x06,0x05,0x2b,0x06,0x01,0x02,"
 			"0x01,"
