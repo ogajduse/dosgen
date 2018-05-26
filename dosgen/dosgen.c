@@ -147,10 +147,12 @@ int main(int argc, char **argv)
 		{
 			sshPass(flood_argc + 1, flood_argv);
 		}
+        // NTP Flood
         else if (strcmp(flood_type, "--ntp") == 0)
         {
             ntp_flood(flood_argc + 1, flood_argv);
         }
+        // SNMP flood
 		else if (strcmp(flood_type, "--snmp") == 0)
 		{
 			snmp_flood(flood_argc + 1, flood_argv);
