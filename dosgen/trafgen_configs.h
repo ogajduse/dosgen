@@ -213,8 +213,8 @@ string trafgen_ntp_cfg = "{"
             "64, "                          // TTL (Time to Live)
             "17, "                          // Protokol UDP
             "csumip(14, 33), "              // Výpočet kontrolného súčtu IP hlavičky csumip(od, do)
-            "%s "                           // Zdrojová IP adresa
-            "%s "                           // Cieľová IP adresa
+            "%s, "                          // Zdrojová IP adresa
+            "%s, "                          // Cieľová IP adresa
             "c16(1123), "                   // Zdrojový port
             "c16(123), "                    // Cieľový port
             "c16(16), "                     // Dĺžka UDP
@@ -238,13 +238,13 @@ string trafgen_snmp_cfg = "{"
 			"64,"                           // TTL (Time to Live)
 			"17,"                           // Protokol UDP
 			"csumip(14, 33),"               // Výpočet kontrolného súčtu IP hlavičky csumip(od, do)
-            "%s "                           // Zdrojová IP adresa
-            "%s "                           // Cieľová IP adresa
+            "%s, "                          // Zdrojová IP adresa
+            "%s, "                          // Cieľová IP adresa
 			"drnd(2),"                      // Zdrojový port
 			"c16(161),"                     // Cieľový port
 			"const16(48),"                  // Dĺžka UDP
 			"const16(0),"                   // Výpočet kontrolného súčtu (pre UDP je povolená 0)
-            /*SNMP*/
+            /* SNMP */
 			"0x30,0x26,0x02,0x01,"
 			"0x01,"                         // Verze
 			"0x04,0x06,"                    // ?
@@ -286,4 +286,3 @@ string trafgen_ssdp_cfg = "{"
             "\"MX: 1\",0x0d,0x0a,"      // Seconds to delay response
             "}";
 #endif
-
