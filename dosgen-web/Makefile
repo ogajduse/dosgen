@@ -41,7 +41,7 @@ install : install-env
 endif
 endif
 
-update : install
+update : install-npm
 
 clean :
 	@rm -rf node_modules
