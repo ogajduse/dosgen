@@ -143,6 +143,24 @@ var attacks = [{
       ["p", "Port", "Empty means port random"],
     ]
   },
+  {
+    "name": "SNMP Flood ", //Meno (titulok)
+    "id": "snmp", //ID
+    "fields": [
+      ["s", "Source IP address", "Specify your target", asterisk],
+      ["d", "Destination IP address", "Specify SNMP agent to query", asterisk],
+      ["p", "Port", "Empty means random port"],
+    ]
+  },
+  {
+    "name": "SSDP Flood ", //Meno (titulok)
+    "id": "snmp", //ID
+    "fields": [
+      ["s", "Source IP address", "Specify your target", asterisk],
+      ["d", "Destination IP address", "Specify destination address", asterisk],
+      ["p", "Port", "Empty means random port"],
+    ]
+  },
 ];
 
 $(function() {
