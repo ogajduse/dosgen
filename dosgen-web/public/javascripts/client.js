@@ -140,7 +140,7 @@ var attacks = [{
     "fields": [
       ["s", "Source IP address", "Specify your target", asterisk],
       ["d", "Destination IP address", "Specify NTP server", asterisk],
-      ["p", "Port", "Empty means port random"],
+      ["p", "Port", "Empty means random port"],
     ]
   },
   {
