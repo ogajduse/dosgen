@@ -157,6 +157,11 @@ int main(int argc, char **argv)
 		{
 			snmp_flood(flood_argc + 1, flood_argv);
 		}
+        // SSDP flood
+        else if (strcmp(flood_type, "--ssdp") == 0)
+        {
+            ssdp_flood(flood_argc + 1, flood_argv);
+        }
 		else
 		{
 			print_help_and_die();

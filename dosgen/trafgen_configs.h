@@ -261,5 +261,29 @@ string trafgen_snmp_cfg = "{"
 			"0x05,0x00"                     // Object Value: Null
 			"}";
 
+string trafgen_ssdp_cfg = "{"
+            "0x01,0x00,0x5e,0x7f,0xff,0xfa,"// Cieľová MAC adresa (IPv4mcast_)
+            "0x9c, 0x4e, 0x36, drnd(3),"    // Zdrojová MAC adresa
+            "c16(0x0800),"                  // Ethertype pre IP
+            "0x45, 0,"                      // Verzia IPv4, IHL, TOS
+            "c16(127),"                     // Celková dĺžka (IP + TCP)
+            "drnd(2),"                      // IPv4 identifikátor
+            "0b00000000, 0b00000000,"       // IPv4 flags, bez fragmentácie
+            "64,"                           // TTL (Time to Live)
+            "17,"                           // Protokol UDP
+            "csumip(14, 33),"               // Výpočet kontrolného súčtu IP hlavičky csumip(od, do)
+            "%s, "                          // Zdrojová IP adresa
+            "%s, "                          // Cieľová IP adresa
+            "drnd(2),"                      // Zdrojový port
+            "c16(1900),"                    // Cieľový port
+            "const16(107),"                 // Dĺžka UDP
+            "const16(0),"                   // Výpočet kontrolného súčtu (pre UDP je povolená 0)
+            /* SSDP */
+            "\"M-SEARCH * HTTP/1.1\",0x0d,0x0a," // Method for search requests - Request applies generally and not to a specific resource. Must be * - HTTP version
+            "\"HOST: 239.255.255.250:1900\",0x0d,0x0a," // Multicast channel and port reserved for SSDP by IANA
+            "\"ST: upnp:rootdevice\",0x0d,0x0a," // Search target
+            "\"MAN: \",0x22,\"ssdp:discover\",0x22,0x0d,0x0a,"
+            "\"MX: 1\",0x0d,0x0a,"      // Seconds to delay response
+            "}";
 #endif
 
