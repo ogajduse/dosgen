@@ -1,1 +1,0 @@
-./gencfg.sh -G ntp -s <SRC_IP> -d <DST_IP> -m <SRC_MAC> -M <DST_MAC> -o monlist.cfg
